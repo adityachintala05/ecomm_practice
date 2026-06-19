@@ -10,6 +10,29 @@ const {
 } = require("../models/models")
 
 
+router.get("/", (req, res) => {
+
+    res.send(`
+        <h1>🚀 Ecomm Practice Backend</h1>
+
+        <p>Backend is running successfully.</p>
+
+        <h3>Available Routes</h3>
+
+        <ul>
+            <li>POST /create-user</li>
+            <li>POST /create-team</li>
+            <li>POST /create-task</li>
+            <li>POST /assign-task</li>
+            <li>POST /complete-task</li>
+            <li>POST /add-comment</li>
+            <li>GET /task/:name</li>
+        </ul>
+
+        <p>Built with Node.js, Express, MongoDB and Docker.</p>
+    `)
+})
+
 // create user
 
 router.post("/create-user", async (req, res) => {
